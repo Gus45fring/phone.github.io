@@ -246,7 +246,7 @@ header p {
     background-position: center;
     
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.85); /* Starting dark fade */
+    background-color: rgba(0, 0, 0, 0.85); 
     
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
