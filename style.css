@@ -342,13 +342,6 @@ header p {
     margin-bottom: 0;
 }
 
-.spec-highlight {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--prism-white);
-    margin-bottom: 1rem;
-}
 
 .showcase-img {
     min-height: 40vh; 
@@ -433,25 +426,6 @@ form input, textarea{
     min-height: 20vh;
     min-width: 50%;
 }
-#submit {
-    color: black;
-    background-color: var(--prism-color);
-    border: 1px solid var(--prism-white);
-    border-radius: 5px;
-    margin-top: 2vh;
-    height: 8vh;
-    width: 20%;
-    font-size: 1.5rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    cursor: pointer; 
-    box-shadow: 0px 0px 15px rgba(207, 207, 3, 0.4);
-    transition: background-color 0.2s ease;
-}
-
-#submit:hover {
-    background-color: rgb(240, 240, 10);
-}
 
 /*
 _____ ___   ___ _____ _____ ____  
@@ -483,8 +457,107 @@ footer div {
 }
 
 .footer_l {
-    text-align: left;
+    text-align: center;
 }
 .footer_r {
-    text-align: right;
+    text-align: center;
+}
+
+/*
+ __  __  ___  ____ ___ _     _____ 
+|  \/  |/ _ \| __ )_ _| |   | ____|
+| |\/| | | | |  _ \| || |   |  _|  
+| |  | | |_| | |_) | || |___| |___ 
+|_|  |_|\___/|____/___|_____|_____|
+*/
+
+@media screen and (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 5vw;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+    }
+
+    nav div {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    nav h1 {
+        font-size: 2.5rem;
+    }
+
+    header h1,
+    .buy-container h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+    header h3, h2 {
+        font-size: 4rem;
+    }
+
+    header p {
+        max-width: 85vw;
+        font-size: 3rem;
+    }
+
+    .product {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 2rem;
+        height: 5vh;
+        width: 30vw;
+    }
+    
+    input,
+    label,
+    textarea {
+        font-size: 3rem;
+    }
+    .contacts div {
+        height: 50vh;
+    }
+
+    p, ul {
+        font-size: 2rem;
+    }
+    
+    .showcase-section span,
+    .showcase-section h3 {
+        font-size: 2.5rem;
+    }
+
+    .showcase-section h1 {
+        font-size: 4rem;
+    }
+
+    .showcase-section p {
+        font-size: 2rem;
+    }
+
+    .showcase-section {
+        padding-top: 5vh 2vh;
+        padding-bottom: 0;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #content {
+        min-width: 85%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 5vw;
+        text-align: center;
+    }
+
 }
