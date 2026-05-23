@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PRISM | Arcus I</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Space+Grotesk:wght@400;500&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">
+            <h1>PRISM</h1>
+        </a>
+        <div>
+            <a href="productgrid.html">products</a>
+            <a href="../html/about.html">about us</a>
+            <a href="../html/contacts.html">contacts</a>
+        </div>
+    </nav>
+    <header id="headerarcus">
+        <h3>Flagship Masterpiece</h3>
+        <h1>Arcus I</h1>
+        <h3>Forma et Virtus</h3>
+        <p>The pinnacle of mobile engineering meeting timeless elegance. Built for those who demand uncompromising
+            performance wrapped within structural perfection.</p>
+    </header>
+
+    <main>
+        <section class="showcase-section">
+            <div class="showcase-grid">
+                <div>
+                    <span>Optics Co-Engineered with Leica</span>
+                    <h1>108MP Leica Summilux</h1>
+                    <h3>1-Inch OmniVision Light Fusion 1050L Sensor</h3>
+                    <p>
+                        Harness unprecedented light collection through a massive 1-inch main sensor architecture, paired
+                        with a 108MP variable periscope array capable of 3x to 5x physical transformation. Complete with
+                        a 50MP ultra-wide and an invisible under-display selfie terminal.
+                    </p>
+                </div>
+                <div class="showcase-img">
+                    <img src="../img/phone34.png">
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-section">
+            <div class="showcase-grid">
+                <div class="showcase-img">
+                    <img src="../img/SoC.png">
+                </div>
+                <div>
+                    <span>Computational Core</span>
+                    <h1>Dimensity 9500 Max</h1>
+                    <h3>Engineered Topology</h3>
+                    <p>
+                        Run continuous operations effortlessly. Outfitted with our custom connectivity chip inside an
+                        IP69K tactical chassis guarded by Corning© Gorilla Glass Victus 2.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-section">
+            <div class="showcase-grid">
+                <div>
+                    <span>Unimaginable</span>
+                    <h1>95.8%</h1>
+                    <h3>Body-To-Screen Ratio</h3>
+                    <p>
+                        A striking 6.5-inch panoramic display utilizing completely uniform bezel widths across all axes,
+                        shifting seamlessly at a lightweight 195 grams. Fueled natively by a massive 7500mAh
+                        Silicon-Carbon cell paired with 120W Hyper-Speed charging.
+                    </p>
+                </div>
+                <div class="showcase-img">
+                    <img src="../img/phone35.png">
+                </div>
+            </div>
+        </section>
+
+        <section class="buy-container">
+            <h1>Own the Arcus I</h1>
+            <p>Interact with the model below</p>
+
+            <!--model viewer stuff-->
+            <script type="module"
+                src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+            <model-viewer src="phone.glb" alt="3D model of phone" auto-rotate camera-controls disable-zoom
+                rotation-per-second="45deg"
+                style="width: 100%; height: 450px; background-color: transparent; margin: 4vh auto; outline: none;">
+            </model-viewer>
+
+            <div
+                style=" color: var(--prism-white); font-size: 2rem;">
+                €999.00
+            </div>
+            <button
+                onclick="alert('Acquistato!')">Purchase
+                Device</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_l">
+            <p>PRISM© technologies MMDCCLXXIX</p>
+            <p>All rights reserved</p>
+        </div>
+        <div class="footer_r">
+            <p><a href="html/contacts.html">Contacts</a></p>
+            <p><a href="html/license.html">License agreement</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

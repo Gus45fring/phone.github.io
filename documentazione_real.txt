@@ -1,0 +1,37 @@
+# Idee:
+- Compagnia tecnologica
+- ggwp 
+- Sito ispirato a vari siti dei telefoni come mi.com, nothing.tech...
+- Render nello sfondo delle varie cose
+- Speranziosamente non usa css
+- ggwp fr now
+- 3d spinnind model of phone 
+# Caratteristiche compagnia
+## PRISM
+- stile in generale classico/elegante, basato sul nero e bianco.
+- latino perché è bello :)
+### Prodotti
+- Arcus I (phone);
+- Tempus I (smartwatch);
+
+### Arcus I
+Specs:
+	- Dimensity 9500 Max;
+	- Cameras:
+		- 108MP 1 inch main
+		- 50MP 1/1.56 inch 0.5x ultrawide
+		- 108MP 1 inch 3x-5x variable periscope
+		- 50MP under display selfie
+	- 7500mAh Si-Ca battery
+	- 120W fast charging
+	- 6.5 inch display with 98% body-to-screen ratio 195g
+	- Other stuff:
+		- Same width bevels all round
+		- IP69K
+		- Corning Gorilla Glass Victus 2
+		- Leica cameras and allat
+		- Chip per migliore connettività
+### Tempus I
+Specs:
+	- 2 settimane di carica
+	- idk?

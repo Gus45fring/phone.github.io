@@ -1,0 +1,490 @@
+/* 
+ _   _ _____    _    ____  _____ ____  
+| | | | ____|  / \  |  _ \| ____|  _ \ 
+| |_| |  _|   / _ \ | | | |  _| | |_) |
+|  _  | |___ / ___ \| |_| | |___|  _ < 
+|_| |_|_____/_/   \_\____/|_____|_| \_\                                 
+    _    _   _ ___ __  __    _  _____ ___ ___  _   _ 
+   / \  | \ | |_ _|  \/  |  / \|_   _|_ _/ _ \| \ | |
+  / _ \ |  \| || || |\/| | / _ \ | |  | | | | |  \| |
+ / ___ \| |\  || || |  | |/ ___ \| |  | | |_| | |\  |
+/_/   \_\_| \_|___|_|  |_/_/   \_\_| |___\___/|_| \_|
+*/
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation-name: fadeInBackground;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0; 
+}
+
+
+header h1, 
+header h3, 
+header p {
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+header h1 {
+    animation-delay: 0.2s;
+}
+
+header h3 {
+    animation-delay: 0.5s;
+}
+
+header p {
+    animation-delay: 0.8s;
+}
+
+/* 
+ ____   _    ____ _____ 
+|  _ \ / \  / ___| ____|
+| |_) / _ \| |  _|  _|  
+|  __/ ___ \ |_| | |___ 
+|_| /_/   \_\____|_____|
+*/
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+:root {
+    --prism-color: rgb(207, 207, 3);
+    --prism-white: rgb(207, 207, 207); 
+}
+
+/*
+ _____ _______  _______   ____ _______   ___     _____ ____  
+|_   _| ____\ \/ /_   _| / ___|_   _\ \ / / |   | ____/ ___| 
+  | | |  _|  \  /  | |   \___ \ | |  \ V /| |   |  _| \___ \ 
+  | | | |___ /  \  | |    ___) || |   | | | |___| |___ ___) |
+  |_| |_____/_/\_\ |_|   |____/ |_|   |_| |_____|_____|____/ 
+    ___      ___ _____ _   _ _____ ____  
+ ( _ )    / _ \_   _| | | | ____|  _ \ 
+ / _ \/\ | | | || | | |_| |  _| | |_) |
+| (_>  < | |_| || | |  _  | |___|  _ < 
+ \___/\/  \___/ |_| |_| |_|_____|_| \_\
+*/
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color:var(--prism-color);
+    letter-spacing: 0.15em;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--prism-white);
+}
+
+
+button {
+    margin-top: 30px;
+    padding: 15px 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: var(--prism-color);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0px 0px 20px rgba(207, 207, 3, 0.4);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: rgb(240, 240, 10);
+}
+
+
+/*
+ _   _    ___     ______    _    ____  
+| \ | |  / \ \   / / __ )  / \  |  _ \ 
+|  \| | / _ \ \ / /|  _ \ / _ \ | |_) |
+| |\  |/ ___ \ V / | |_) / ___ \|  _ < 
+|_| \_/_/   \_\_/  |____/_/   \_\_| \_\
+*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0));
+    padding: 1vw 5vw;
+    z-index: 100;
+    height: 5vh;
+}
+nav a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 35%;
+}
+
+/*   
+ _   _ _____    _    ____  _____ ____   __ __  
+| | | | ____|  / \  |  _ \| ____|  _ \ / /_\ \ 
+| |_| |  _|   / _ \ | | | |  _| | |_) | / __| |
+|  _  | |___ / ___ \| |_| | |___|  _ <| \__ \ |
+|_| |_|_____/_/   \_\____/|_____|_| \_\ |___/ |
+                                       \_\ /_/ 
+*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    top: 0;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('img/phone3.png');
+    background-size: cover;
+    background-position: center;
+}
+header h1 {
+    font-size: 5em;
+}
+header p {
+    max-width: 40vw;
+    text-align: center;
+}
+
+#headercontacts {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('img/phone31.png');
+    background-size: cover;
+    background-position: center;
+}
+#headerabout {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('img/phone36.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#headerproducts {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('img/phone33.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#headerarcus {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('img/phone37.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*
+ ____   _    ____ _____    ____ ___  _   _ _____ _____ _   _ _____ 
+|  _ \ / \  / ___| ____|  / ___/ _ \| \ | |_   _| ____| \ | |_   _|
+| |_) / _ \| |  _|  _|   | |  | | | |  \| | | | |  _| |  \| | | |  
+|  __/ ___ \ |_| | |___  | |__| |_| | |\  | | | | |___| |\  | | |  
+|_| /_/   \_\____|_____|  \____\___/|_| \_| |_| |_____|_| \_| |_|   
+*/
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    cursor: pointer;
+    margin: 50px;
+    
+    background-image: url('img/phone33.png');
+    background-size: cover;
+    background-position: center;
+    
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.85); /* Starting dark fade */
+    
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    
+    background-color: rgba(0, 0, 0, 0.335); 
+}
+
+.license {
+    margin: 5vh 0;
+    text-align: center;
+    padding: 0 5vw;
+}
+.license h3 {
+    font-size: 3rem;
+}
+.license ul {
+    line-height: 2;
+
+}
+
+/*
+ ____  ____   ___  ____  _   _  ____ _____ ____  
+|  _ \|  _ \ / _ \|  _ \| | | |/ ___|_   _/ ___| 
+| |_) | |_) | | | | | | | | | | |     | | \___ \ 
+|  __/|  _ <| |_| | |_| | |_| | |___  | |  ___) |
+|_|   |_| \_\\___/|____/ \___/ \____| |_| |____/ 
+*/
+
+
+
+/* product grid */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 5vh 5vw;
+    background-color: black;
+}
+
+.product-grid .product {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.product-price {
+    font-family: 'Space Mono', monospace;
+    color: var(--prism-color);
+    font-size: 1.5rem;
+    margin-top: 15px;
+    letter-spacing: 0.05em;
+}
+ 
+/* product content */
+
+.showcase-section {
+    padding: 15vh 8vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #111;
+}
+.showcase-section h1 {
+    font-size: 4rem;
+}
+    
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: center;
+}
+
+.showcase-grid p {
+    color: #888;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.showcase-grid span {
+        font-family: 'Space Mono', monospace;
+    color: var(--prism-white);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.spec-highlight {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--prism-white);
+    margin-bottom: 1rem;
+}
+
+.showcase-img {
+    min-height: 40vh; 
+    background-color: #000; 
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.showcase-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buy-container {
+    background: linear-gradient(to bottom, #000, #161616);
+    padding: 15vh 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buy-container h1 {
+    font-size: 5rem;
+}
+.buy-container p {
+    color: #666;
+}
+
+
+
+/*
+  ____ ___  _   _ _____  _    ____ _____   ___ _   _ _____ ___  
+ / ___/ _ \| \ | |_   _|/ \  / ___|_   _| |_ _| \ | |  ___/ _ \ 
+| |  | | | |  \| | | | / _ \| |     | |    | ||  \| | |_ | | | |
+| |__| |_| | |\  | | |/ ___ \ |___  | |    | || |\  |  _|| |_| |
+ \____\___/|_| \_| |_/_/   \_\____| |_|   |___|_| \_|_|   \___/  
+*/
+
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 1vw 20vh 1vw;
+
+}
+.contacts div {
+    width: 100%;
+    min-height: 50vh;
+}
+
+form {
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+}
+
+form input, textarea{
+    width: 30%;
+    margin-bottom: 2vh;
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #111;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 1vh;
+}
+
+
+#content {
+    min-height: 20vh;
+    min-width: 50%;
+}
+#submit {
+    color: black;
+    background-color: var(--prism-color);
+    border: 1px solid var(--prism-white);
+    border-radius: 5px;
+    margin-top: 2vh;
+    height: 8vh;
+    width: 20%;
+    font-size: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    cursor: pointer; 
+    box-shadow: 0px 0px 15px rgba(207, 207, 3, 0.4);
+    transition: background-color 0.2s ease;
+}
+
+#submit:hover {
+    background-color: rgb(240, 240, 10);
+}
+
+/*
+_____ ___   ___ _____ _____ ____  
+|  ___/ _ \ / _ \_   _| ____|  _ \ 
+| |_ | | | | | | || | |  _| | |_) |
+|  _|| |_| | |_| || | | |___|  _ < 
+|_|   \___/ \___/ |_| |_____|_| \_\
+*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(38, 38, 38);
+    color: var(--prism-white);
+    padding: 0 1vw;
+
+}
+
+footer a {
+    text-decoration: underline;
+    color: rgb(164, 164, 255);
+}
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.footer_l {
+    text-align: left;
+}
+.footer_r {
+    text-align: right;
+}
